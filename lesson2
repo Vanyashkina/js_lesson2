@@ -1,0 +1,243 @@
+<script>
+    // 1. Дан код:
+    var a = 1,
+        b = 1,
+        c, d; //объявляем переменные, присваиваем значения 
+    c = ++a; //префиксный инкремент, увеличивает значение переменной а на 1, потом присваевает это значение с
+    alert(c); // 2, вывод значения переменной с
+    d = b++; //постфиксный инкремент, сначала значение b присваивается d, потом b увеличивается на 1
+    alert(d); // 1, вывод значения переменной d
+    c = (2 + ++a); //значение а увеличивается на 1, зачем прибавляется 2, результат присваевается переменной с
+    alert(c); // 5, вывод значения переменной с
+    d = (2 + b++); //сначала к b прибавляется 2 и это значение присваивается d, потом выполняется операция инкремента b
+    alert(d); // 4 вывод d
+    alert(a); // 3 вывод a
+    alert(b); // 3 вывод b
+    //Почему код даёт именно такие результаты?
+
+
+    //2. Чему будет равен x в примере ниже?
+    var a = 2; //объявляется переменная а, ей присвоено значение 2
+    var x = 1 + (a *= 2); //переменная а умножается на 2, потом прибавляется 1, это значение присвоено объявленной переменной х
+    //а=4, х=5
+
+
+    //    3. Объявить две целочисленные переменные a и b и задать им произвольные начальные значения. Затем написать скрипт, который работает по следующему принципу:
+    //    если a и b положительные, вывести их разность;
+    //    если а и b отрицательные, вывести их произведение;
+    //    если а и b разных знаков, вывести их сумму; ноль можно считать положительным числом.
+    var a = 1,
+        b = 1;
+    var a = +prompt("Введите а ");
+    var b = +prompt("Введите b ");
+    if (a >= 0 && b >= 0) {
+        (a >= b) ? alert(a - b): alert(b - a);
+    } else if (a <= 0 && b <= 0) {
+        alert(a * b);
+    } else {
+        alert(a + b);
+    }
+
+
+    //      4. Присвоить переменной а значение в промежутке [0..15]. С помощью оператора switch организовать вывод чисел от a до 15.
+    var a = parseInt(Math.random() * 15);
+    switch (a) {
+        case 1:
+            {
+                for (var i = a; i <= 15; i++) {
+                    console.log(i);
+                }
+                break;
+            }
+        case 2:
+            {
+                for (var i = a; i <= 15; i++) {
+                    console.log(i);
+                }
+                break;
+            }
+        case 3:
+            {
+                for (var i = a; i <= 15; i++) {
+                    console.log(i);
+                }
+                break;
+            }
+        case 4:
+            {
+                for (var i = a; i <= 15; i++) {
+                    console.log(i);
+                }
+                break;
+            }
+        case 5:
+            {
+                for (var i = a; i <= 15; i++) {
+                    console.log(i);
+                }
+                break;
+            }
+        case 6:
+            {
+                for (var i = a; i <= 15; i++) {
+                    console.log(i);
+                }
+                break;
+            }
+        case 7:
+            {
+                for (var i = a; i <= 15; i++) {
+                    console.log(i);
+                }
+                break;
+            }
+        case 8:
+            {
+                for (var i = a; i <= 15; i++) {
+                    console.log(i);
+                }
+                break;
+            }
+        case 9:
+            {
+                for (var i = a; i <= 15; i++) {
+                    console.log(i);
+                }
+                break;
+            }
+        case 10:
+            {
+                for (var i = a; i <= 15; i++) {
+                    console.log(i);
+                }
+                break;
+            }
+        case 11:
+            {
+                for (var i = a; i <= 15; i++) {
+                    console.log(i);
+                }
+                break;
+            }
+        case 12:
+            {
+                for (var i = a; i <= 15; i++) {
+                    console.log(i);
+                }
+                break;
+            }
+        case 13:
+            {
+                for (var i = a; i <= 15; i++) {
+                    console.log(i);
+                }
+                break;
+            }
+        case 14:
+            {
+                for (var i = a; i <= 15; i++) {
+                    console.log(i);
+                }
+                break;
+            }
+        case 15:
+            {
+                for (var i = a; i <= 15; i++) {
+                    console.log(i);
+                }
+                break;
+            }
+    }
+
+
+    // 5. Реализовать основные 4 арифметические операции в виде функций с двумя параметрами. Обязательно использовать оператор return.
+    var a, b, c;
+
+    function sum(a, b) {
+        c = a + b;
+        return c;
+    }
+
+    function dif(a, b) {
+        if (a >= b) {
+            c = a - b;
+        } else {
+            c = b - a;
+        }
+        return c;
+    }
+
+    function mul(a, b) {
+        c = a * b;
+        return c;
+    }
+
+    function div(a, b) {
+        if (a >= b) {
+            if (b > 0) {
+                c = a / b;
+            } else {
+                console.log("На 0 делить нельзя");
+            }
+        } else {
+            c = b / a;
+        }
+        return c;
+    }
+
+    // 6. Реализовать функцию с тремя параметрами: function mathOperation(arg1, arg2, operation), где arg1, arg2 – значения аргументов, operation – строка с названием операции. В зависимости от переданного значения операции выполнить одну из арифметических операций (использовать функции из пункта 3) и вернуть полученное значение (использовать switch).
+    var arg1, arg2;
+
+    function mathOperation(arg1, arg2, operation) {
+        console.log(arg1);
+        console.log(arg2);
+        switch (operation) {
+            case '+':
+                {
+                    sum(arg1, arg2);
+                    console.log(c);
+                    break;
+                }
+            case '-':
+                {
+                    dif(arg1, arg2);
+                    console.log(c);
+                    break;
+                }
+            case '*':
+                {
+                    mul(arg1, arg2);
+                    console.log(c);
+                    break;
+                }
+            case '/':
+                {
+                    div(arg1, arg2);
+                    console.log(c);
+                    break;
+                }
+        }
+    }
+    arg1 = parseInt(Math.random() * 10);
+    arg2 = parseInt(Math.random() * 10);
+    var operation = prompt("Введите знак арифметической операции ");
+    mathOperation(arg1, arg2, operation);
+
+    //  7) *Сравнить null и 0. Попробуйте объяснить результат.
+    //  8) *С помощью рекурсии организовать функцию возведения числа в степень. Формат: function power(val, pow), где val – заданное число, pow – степень.
+    var val, pow, res = 1;
+    val = +prompt("Введите число ");
+    pow = +prompt("Введите степень ");
+    power(val, pow);
+
+    function power(val, pow) {
+        res = res * val;
+        pow--;
+        if (pow == 0) {
+            return res;
+        } else {
+            power(val, pow);
+        }
+    }
+    console.log(res);
+</script>
